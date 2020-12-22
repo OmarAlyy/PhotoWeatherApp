@@ -1,19 +1,23 @@
 package com.omaraly.photoweatherapp.Adapters;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.omaraly.photoweatherapp.Activities.MainActivity;
+import com.omaraly.photoweatherapp.Activities.ShowImageActivity;
 import com.omaraly.photoweatherapp.Models.Post;
 import com.omaraly.photoweatherapp.R;
+import com.omaraly.photoweatherapp.Utilities.GlobalVariables;
+import com.omaraly.photoweatherapp.Utilities.IntentClass;
 import com.omaraly.photoweatherapp.Utilities.Utilities;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 
 public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
@@ -24,7 +28,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
 
     public PostsAdapter(MainActivity activity, List<Post> list) {
-        super();
+        super ();
         this.list = list;
         this.activity = activity;
     }
@@ -32,41 +36,35 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_weather, parent, false);
-        ViewHolder viewHolder = new ViewHolder(v);
+        View v = LayoutInflater.from (parent.getContext ())
+                .inflate (R.layout.item_weather, parent, false);
+        ViewHolder viewHolder = new ViewHolder (v);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
-        Post model = list.get(position);
+        Post model = list.get (position);
 
-        Utilities.downLoadImageLocal(holder.image, model.getPath());
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activity.mainViewModel.deleteOnePost(model);
-            }
+        Utilities.downLoadImageLocal (holder.image, model.getPath ());
+        holder.delete.setOnClickListener (view -> activity.mainViewModel.deleteOnePost (model));
+
+
+        holder.image.setOnClickListener (view -> {
+
+
+            Bundle bundle = new Bundle ();
+            bundle.putString (GlobalVariables.IMAGE_PATH, model.getPath ());
+            IntentClass.goToActivity (activity, ShowImageActivity.class, bundle);
         });
 
-
-        holder.linShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                Utilities.shareImage(activity, model.getPath());
-
-
-            }
-        });
+        holder.linShare.setOnClickListener (view -> Utilities.shareImage (activity, model.getPath ()));
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return list.size ();
     }
 
 
@@ -78,12 +76,12 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private LinearLayout linShare;
 
         public ViewHolder(View itemView) {
-            super(itemView);
+            super (itemView);
 
 
-            image = itemView.findViewById(R.id.image);
-            delete = itemView.findViewById(R.id.delete);
-            linShare = itemView.findViewById(R.id.linShare);
+            image = itemView.findViewById (R.id.image);
+            delete = itemView.findViewById (R.id.delete);
+            linShare = itemView.findViewById (R.id.linShare);
         }
     }
 

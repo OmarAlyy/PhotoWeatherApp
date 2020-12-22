@@ -16,12 +16,12 @@ public class DatabaseClient {
 
         //creating the app database with Room database builder
         //MyToDos is the name of the database
-        appDatabase = Room.databaseBuilder(mCtx, AppDatabase.class, "MyPosts").build();
+        appDatabase = Room.databaseBuilder (mCtx, AppDatabase.class, "MyPosts").build ();
     }
 
     public static synchronized DatabaseClient getInstance(Context mCtx) {
         if (mInstance == null) {
-            mInstance = new DatabaseClient(mCtx);
+            mInstance = new DatabaseClient (mCtx);
         }
         return mInstance;
     }

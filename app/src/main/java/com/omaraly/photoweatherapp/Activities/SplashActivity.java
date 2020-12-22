@@ -19,17 +19,17 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ActivitySplashBinding activitySplashBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
+        super.onCreate (savedInstanceState);
+        ActivitySplashBinding activitySplashBinding = DataBindingUtil.setContentView (this, R.layout.activity_splash);
         activity = this;
 
 
-        ConfigurationFile.setCurrentLanguage(activity, "en");
-        new Handler().postDelayed(new Runnable() {
+        ConfigurationFile.setCurrentLanguage (activity, "en");
+        new Handler ().postDelayed (new Runnable () {
             @Override
             public void run() {
 
-                IntentClass.goToActivityAndClear(activity, MainActivity.class, null);
+                IntentClass.goToActivityAndClear (activity, MainActivity.class, null);
 
             }
         }, 3000);

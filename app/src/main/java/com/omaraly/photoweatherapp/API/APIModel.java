@@ -26,8 +26,8 @@ public class APIModel {
             default:
 
                 if (activity != null) {
-                    if (activity.getCurrentFocus() != null)
-                        Dialogs.showSnackbarRefresh(activity.getCurrentFocus(), activity.getString(R.string.no_network), refreshListener);
+                    if (activity.getCurrentFocus () != null)
+                        Dialogs.showSnackbarRefresh (activity.getCurrentFocus (), activity.getString (R.string.no_network), refreshListener);
 
                 }
                 break;
@@ -38,21 +38,21 @@ public class APIModel {
 
 
     public static AsyncHttpClient getMethod(String url, TextHttpResponseHandler textHttpResponseHandler) {
-        AsyncHttpClient client = new AsyncHttpClient();
+        AsyncHttpClient client = new AsyncHttpClient ();
         KeyStore trustStore = null;
         try {
-            trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
-            trustStore.load(null, null);
-            MySSLSocketFactory socketFactory = new MySSLSocketFactory(trustStore);
-            socketFactory.setHostnameVerifier(MySSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-            client.setSSLSocketFactory(socketFactory);
+            trustStore = KeyStore.getInstance (KeyStore.getDefaultType ());
+            trustStore.load (null, null);
+            MySSLSocketFactory socketFactory = new MySSLSocketFactory (trustStore);
+            socketFactory.setHostnameVerifier (MySSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+            client.setSSLSocketFactory (socketFactory);
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace ();
         }
 
-        client.addHeader("Accept", "application/json");
-        client.addHeader("User-Agent", "PostmanRuntime/7.2.0");
-        client.get(BASE_URL + url, textHttpResponseHandler);
+        client.addHeader ("Accept", "application/json");
+        client.addHeader ("User-Agent", "PostmanRuntime/7.2.0");
+        client.get (BASE_URL + url, textHttpResponseHandler);
 
         return client;
     }

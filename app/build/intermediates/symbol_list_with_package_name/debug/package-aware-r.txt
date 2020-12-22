@@ -1940,6 +1940,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id share
 id shortcut
 id showCustom
 id showHome
@@ -2093,6 +2094,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_show_card
+layout activity_show_image
 layout activity_splash
 layout bottom_sheet_select_image
 layout custom_dialog

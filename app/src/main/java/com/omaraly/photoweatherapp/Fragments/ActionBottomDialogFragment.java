@@ -22,31 +22,31 @@ public class ActionBottomDialogFragment extends BottomSheetDialogFragment
     private ItemClickListener mListener;
 
     public static ActionBottomDialogFragment newInstance() {
-        return new ActionBottomDialogFragment();
+        return new ActionBottomDialogFragment ();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.bottom_sheet_select_image, container, false);
+        binding = DataBindingUtil.inflate (inflater, R.layout.bottom_sheet_select_image, container, false);
 
-        binding.linGallery.setOnClickListener(this);
-        binding.linCamera.setOnClickListener(this);
+        binding.linGallery.setOnClickListener (this);
+        binding.linCamera.setOnClickListener (this);
 
-        return binding.getRoot();
+        return binding.getRoot ();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        super.onViewCreated (view, savedInstanceState);
 
     }
 
 
     @Override
     public void onAttach(Context context) {
-        super.onAttach(context);
+        super.onAttach (context);
         if (context instanceof ItemClickListener) {
             mListener = (ItemClickListener) context;
         }
@@ -54,24 +54,24 @@ public class ActionBottomDialogFragment extends BottomSheetDialogFragment
 
     @Override
     public void onDetach() {
-        super.onDetach();
+        super.onDetach ();
         mListener = null;
     }
 
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()) {
+        switch (view.getId ()) {
             case R.id.linCamera:
 
-                mListener.onItemClick(GlobalVariables.CAMERA);
-                dismiss();
+                mListener.onItemClick (GlobalVariables.CAMERA);
+                dismiss ();
                 break;
 
             case R.id.linGallery:
 
-                mListener.onItemClick(GlobalVariables.GALLERY);
-                dismiss();
+                mListener.onItemClick (GlobalVariables.GALLERY);
+                dismiss ();
                 break;
         }
 

@@ -1,98 +1,102 @@
 [
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\xml\\provider_paths.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_circle.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_circle.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/font_din_next.ttf.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/font/din_next.ttf"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle_background.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\circle_background.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/layout_item_weather.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/layout/item_weather.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/font_stc_regular.ttf.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/font/stc_regular.ttf"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_access_time_24.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_access_time_24.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_access_time_24.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_access_time_24.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_circle.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_circle.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_location_on_24.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_location_on_24.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_camera_alt_24.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_camera_alt_24.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_favorite.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_favorite.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_wb_sunny_24.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_wb_sunny_24.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\font_stc_regular.ttf.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\font\\stc_regular.ttf"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/layout_bottom_sheet_select_image.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/layout/bottom_sheet_select_image.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_share.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_share.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/layout_activity_show_image.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/layout/activity_show_image.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_circle_background.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/circle_background.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_sheet_select_image.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\bottom_sheet_select_image.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_wb_sunny_24.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_wb_sunny_24.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_share.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_share.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_image_search_24.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_image_search_24.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/xml_provider_paths.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/xml/provider_paths.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_weather.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\item_weather.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_image_search_24.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_image_search_24.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\activity_splash.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/layout_activity_show_card.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/layout/activity_show_card.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_delete_24.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_delete_24.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/layout_activity_splash.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/layout/activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_arrow_back_24.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_24.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_show_card.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\activity_show_card.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_location_on_24.xml.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\drawable\\ic_baseline_location_on_24.xml"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_favorite.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_favorite.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\font_din_next.ttf.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\font\\din_next.ttf"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_delete_24.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_delete_24.xml"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/drawable_ic_baseline_camera_alt_24.xml.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml"
+    },
+    {
+        "merged": "/Users/omaraly/Documents/TaskRub/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/omaraly/Documents/TaskRub/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
 ]

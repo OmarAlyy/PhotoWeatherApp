@@ -33,46 +33,46 @@ public class ShowCardViewModel extends AndroidViewModel {
     public PostsRepository postsRepository;
     public ShowCardActivity activity;
 
-    public ObservableField<String> temp = new ObservableField<>("");
-    public ObservableField<String> text = new ObservableField<>("");
-    public ObservableField<String> main = new ObservableField<>("");
-    public ObservableField<String> country = new ObservableField<>("");
-    public ObservableField<String> time = new ObservableField<>("");
-    public ObservableField<String> lat = new ObservableField<>("");
-    public ObservableField<String> lon = new ObservableField<>("");
-    public ObservableBoolean isLoading = new ObservableBoolean(true);
+    public ObservableField<String> temp = new ObservableField<> ("");
+    public ObservableField<String> text = new ObservableField<> ("");
+    public ObservableField<String> main = new ObservableField<> ("");
+    public ObservableField<String> country = new ObservableField<> ("");
+    public ObservableField<String> time = new ObservableField<> ("");
+    public ObservableField<String> lat = new ObservableField<> ("");
+    public ObservableField<String> lon = new ObservableField<> ("");
+    public ObservableBoolean isLoading = new ObservableBoolean (true);
 
     public ShowCardViewModel(@NonNull Application application) {
-        super(application);
-        postsRepository = new PostsRepository(application);
+        super (application);
+        postsRepository = new PostsRepository (application);
 
     }
 
 
     public void onTexttChanged(CharSequence s, int start, int before, int count) {
-        text.set(s.toString());
+        text.set (s.toString ());
 
     }
 
 
     public void getData() {
 
-        GPSTracker gpsTracker = new GPSTracker(activity);
+        GPSTracker gpsTracker = new GPSTracker (activity);
 
-        APIModel.getMethod("?lat=" + gpsTracker.getLatitude() + "&lon=" + gpsTracker.getLongitude() + "&appid=" + APIModel.APP_ID + "&units=metric", new TextHttpResponseHandler() {
+        APIModel.getMethod ("?lat=" + gpsTracker.getLatitude () + "&lon=" + gpsTracker.getLongitude () + "&appid=" + APIModel.APP_ID + "&units=metric", new TextHttpResponseHandler () {
             @Override
             public void onStart() {
-                super.onStart();
+                super.onStart ();
 
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
 
-                Dialogs.showSnackbarRefresh(activity.binding.card, activity.getString(R.string.no_network), new APIModel.RefreshListener() {
+                Dialogs.showSnackbarRefresh (activity.binding.card, activity.getString (R.string.no_network), new APIModel.RefreshListener () {
                     @Override
                     public void onRefresh() {
-                        getData();
+                        getData ();
                     }
                 });
 
@@ -81,22 +81,22 @@ public class ShowCardViewModel extends AndroidViewModel {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
-                Type dataType = new TypeToken<WeatherDataModel>() {
-                }.getType();
-                WeatherDataModel data = new Gson().fromJson(responseString, dataType);
-                temp.set(data.main.temp + "");
-                main.set(data.weather.get(0).main);
-                String icon = APIModel.URL_IMAGE + data.weather.get(0).icon + "@2x.png";
-                Utilities.downLoadImage(activity.binding.iconStatus, icon);
-                String currentTime = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
-                time.set(currentTime);
-                country.set(data.sys.country + " , " + data.name);
-                isLoading.set(false);
+                Type dataType = new TypeToken<WeatherDataModel> () {
+                }.getType ();
+                WeatherDataModel data = new Gson ().fromJson (responseString, dataType);
+                temp.set (data.main.temp + "");
+                main.set (data.weather.get (0).main);
+                String icon = APIModel.URL_IMAGE + data.weather.get (0).icon + "@2x.png";
+                Utilities.downLoadImage (activity.binding.iconStatus, icon);
+                String currentTime = new SimpleDateFormat ("HH:mm", Locale.getDefault ()).format (new Date ());
+                time.set (currentTime);
+                country.set (data.sys.country + " , " + data.name);
+                isLoading.set (false);
             }
 
             @Override
             public void onFinish() {
-                super.onFinish();
+                super.onFinish ();
 
             }
         });
@@ -105,22 +105,22 @@ public class ShowCardViewModel extends AndroidViewModel {
 
 
     public void back() {
-        activity.finish();
+        activity.finish ();
     }
 
     public void save() {
 
-        Long tsLong = System.currentTimeMillis() / 1000;
-        String itme_stamp = tsLong.toString();
+        Long tsLong = System.currentTimeMillis () / 1000;
+        String itme_stamp = tsLong.toString ();
         try {
-            String imagePath = Camera.saveImage(activity, Camera.getBitmapFromView(activity.binding.card), itme_stamp);
+            String imagePath = Camera.saveImage (activity, Camera.getBitmapFromView (activity.binding.card), itme_stamp);
 
-            Post post = new Post();
-            post.setPath(imagePath);
-            postsRepository.insert(post);
-            activity.finish();
+            Post post = new Post ();
+            post.setPath (imagePath);
+            postsRepository.insert (post);
+            activity.finish ();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace ();
         }
 
     }

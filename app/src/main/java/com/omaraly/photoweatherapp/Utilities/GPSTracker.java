@@ -42,7 +42,7 @@ public class GPSTracker implements LocationListener {
 
     public GPSTracker(Context context) {
         this.mContext = context;
-        getLocation();
+        getLocation ();
     }
 
     /**
@@ -57,18 +57,18 @@ public class GPSTracker implements LocationListener {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             try {
-                locationMode = Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.LOCATION_MODE);
+                locationMode = Settings.Secure.getInt (context.getContentResolver (), Settings.Secure.LOCATION_MODE);
 
             } catch (Exception e) {
-                e.printStackTrace();
+                e.printStackTrace ();
                 return false;
             }
 
             return locationMode != Settings.Secure.LOCATION_MODE_OFF;
 
         } else {
-            locationProviders = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-            return !TextUtils.isEmpty(locationProviders);
+            locationProviders = Settings.Secure.getString (context.getContentResolver (), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
+            return !TextUtils.isEmpty (locationProviders);
         }
 
 
@@ -82,19 +82,19 @@ public class GPSTracker implements LocationListener {
     public Location getLocation() {
         try {
             locationManager = (LocationManager) mContext
-                    .getSystemService(Context.LOCATION_SERVICE);
+                    .getSystemService (Context.LOCATION_SERVICE);
 
             // getting GPS status
             isGPSEnabled = locationManager
-                    .isProviderEnabled(LocationManager.GPS_PROVIDER);
+                    .isProviderEnabled (LocationManager.GPS_PROVIDER);
 
-            Log.v("isGPSEnabled", "=" + isGPSEnabled);
+            Log.v ("isGPSEnabled", "=" + isGPSEnabled);
 
             // getting network status
             isNetworkEnabled = locationManager
-                    .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+                    .isProviderEnabled (LocationManager.NETWORK_PROVIDER);
 
-            Log.v("isNetworkEnabled", "=" + isNetworkEnabled);
+            Log.v ("isNetworkEnabled", "=" + isNetworkEnabled);
 
             if (isGPSEnabled == false && isNetworkEnabled == false) {
                 // no network provider is enabled
@@ -102,7 +102,7 @@ public class GPSTracker implements LocationListener {
                 this.canGetLocation = true;
                 if (isNetworkEnabled) {
                     location = null;
-                    if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission (mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission (mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
                         //    ActivityCompat#requestPermissions
                         // here to request the missing permissions, and then overriding
@@ -112,16 +112,16 @@ public class GPSTracker implements LocationListener {
                         // for ActivityCompat#requestPermissions for more details.
                         return null;
                     }
-                    locationManager.requestLocationUpdates(
+                    locationManager.requestLocationUpdates (
                             LocationManager.NETWORK_PROVIDER,
                             MIN_TIME_BW_UPDATES,
                             MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
                     if (locationManager != null) {
                         location = locationManager
-                                .getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+                                .getLastKnownLocation (LocationManager.NETWORK_PROVIDER);
                         if (location != null) {
-                            latitude = location.getLatitude();
-                            longitude = location.getLongitude();
+                            latitude = location.getLatitude ();
+                            longitude = location.getLongitude ();
                         }
                     }
                 }
@@ -129,16 +129,16 @@ public class GPSTracker implements LocationListener {
                 if (isGPSEnabled) {
                     location = null;
                     if (location == null) {
-                        locationManager.requestLocationUpdates(
+                        locationManager.requestLocationUpdates (
                                 LocationManager.GPS_PROVIDER,
                                 MIN_TIME_BW_UPDATES,
                                 MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
                         if (locationManager != null) {
                             location = locationManager
-                                    .getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                                    .getLastKnownLocation (LocationManager.GPS_PROVIDER);
                             if (location != null) {
-                                latitude = location.getLatitude();
-                                longitude = location.getLongitude();
+                                latitude = location.getLatitude ();
+                                longitude = location.getLongitude ();
                             }
                         }
                     }
@@ -146,7 +146,7 @@ public class GPSTracker implements LocationListener {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace ();
         }
 
         return location;
@@ -158,7 +158,7 @@ public class GPSTracker implements LocationListener {
      */
     public void stopUsingGPS() {
         if (locationManager != null) {
-            if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission (mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission (mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -168,7 +168,7 @@ public class GPSTracker implements LocationListener {
                 // for ActivityCompat#requestPermissions for more details.
                 return;
             }
-            locationManager.removeUpdates(GPSTracker.this);
+            locationManager.removeUpdates (GPSTracker.this);
         }
     }
 
@@ -177,7 +177,7 @@ public class GPSTracker implements LocationListener {
      */
     public double getLatitude() {
         if (location != null) {
-            latitude = location.getLatitude();
+            latitude = location.getLatitude ();
         }
 
         // return latitude
@@ -189,7 +189,7 @@ public class GPSTracker implements LocationListener {
      */
     public double getLongitude() {
         if (location != null) {
-            longitude = location.getLongitude();
+            longitude = location.getLongitude ();
         }
 
         // return longitude
@@ -208,30 +208,30 @@ public class GPSTracker implements LocationListener {
     public void showSettingsAlert() {
 
 
-        final androidx.appcompat.app.AlertDialog.Builder builder = new MaterialAlertDialogBuilder(mContext, R.style.AlertDialogTheme)
+        final androidx.appcompat.app.AlertDialog.Builder builder = new MaterialAlertDialogBuilder (mContext, R.style.AlertDialogTheme)
 
-                .setTitle("GPS")
-                .setMessage("Your GPS seems to be disabled, do you want to enable it?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setTitle ("GPS")
+                .setMessage ("Your GPS seems to be disabled, do you want to enable it?")
+                .setPositiveButton ("Yes", new DialogInterface.OnClickListener () {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                        Intent intent = new Intent(
+                        Intent intent = new Intent (
                                 Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        mContext.startActivity(intent);
-                        dialogInterface.dismiss();
+                        mContext.startActivity (intent);
+                        dialogInterface.dismiss ();
 
                     }
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton ("No", new DialogInterface.OnClickListener () {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                        dialogInterface.cancel();
+                        dialogInterface.cancel ();
 
                     }
                 });
-        builder.show();
+        builder.show ();
 
 
     }

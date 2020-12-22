@@ -35,24 +35,24 @@ public class MainViewModel extends AndroidViewModel {
     private LiveData<List<Post>> allPosts;
 
     public MainViewModel(@NonNull Application application) {
-        super(application);
+        super (application);
         this.application = application;
-        postsRepository = new PostsRepository(application);
-        allPosts = postsRepository.getPostsListLiveData();
+        postsRepository = new PostsRepository (application);
+        allPosts = postsRepository.getPostsListLiveData ();
 
     }
 
 
     public void deleteOnePost(Post post) {
-        postsRepository.delete(post);
+        postsRepository.delete (post);
     }
 
     public void addImageClick() {
 
         if (isGetPermissions && gpsOpen)
-            Dialogs.showBottomSheet(activity);
+            Dialogs.showBottomSheet (activity);
         else
-            Dialogs.showAlertPermission(activity);
+            Dialogs.showAlertPermission (activity);
     }
 
     public LiveData<List<Post>> getAllPosts() {
@@ -62,21 +62,21 @@ public class MainViewModel extends AndroidViewModel {
 
     public void isNeedPermission() {
         boolean permissionAccessFineLocationApproved =
-                ActivityCompat.checkSelfPermission(
+                ActivityCompat.checkSelfPermission (
                         activity, Manifest.permission.ACCESS_FINE_LOCATION)
                         == PackageManager.PERMISSION_GRANTED;
 
         boolean cameraPermissionApproved =
-                ActivityCompat.checkSelfPermission(
+                ActivityCompat.checkSelfPermission (
                         activity, Manifest.permission.CAMERA)
                         == PackageManager.PERMISSION_GRANTED;
 
         boolean storgePermissionApproved =
-                ActivityCompat.checkSelfPermission(
+                ActivityCompat.checkSelfPermission (
                         activity, Manifest.permission.READ_EXTERNAL_STORAGE)
                         == PackageManager.PERMISSION_GRANTED;
         boolean storge2PermissionApproved =
-                ActivityCompat.checkSelfPermission(
+                ActivityCompat.checkSelfPermission (
                         activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         == PackageManager.PERMISSION_GRANTED;
 
@@ -87,22 +87,22 @@ public class MainViewModel extends AndroidViewModel {
 
 
     public void openShowCardActivity(String path) {
-        Bundle bundle = new Bundle();
-        bundle.putString(GlobalVariables.IMAGE_PATH, path);
-        bundle.putDouble(GlobalVariables.LATITUDE, lat);
-        bundle.putDouble(GlobalVariables.LONGITUDE, lon);
-        IntentClass.goToActivity(activity, ShowCardActivity.class, bundle);
+        Bundle bundle = new Bundle ();
+        bundle.putString (GlobalVariables.IMAGE_PATH, path);
+        bundle.putDouble (GlobalVariables.LATITUDE, lat);
+        bundle.putDouble (GlobalVariables.LONGITUDE, lon);
+        IntentClass.goToActivity (activity, ShowCardActivity.class, bundle);
 
     }
 
 
     public void requestPermissions() {
 
-        isNeedPermission();
+        isNeedPermission ();
         // Provide an additional rationale to the user. This would happen if the user denied the
         // request previously, but didn't check the "Don't ask again" checkbox.
         if (!isGetPermissions) {
-            ActivityCompat.requestPermissions(activity,
+            ActivityCompat.requestPermissions (activity,
                     new String[]{
                             Manifest.permission.ACCESS_FINE_LOCATION,
                             Manifest.permission.CAMERA,
@@ -114,23 +114,23 @@ public class MainViewModel extends AndroidViewModel {
 
         } else {
             if (gpsOpen)
-                Dialogs.showBottomSheet(activity);
+                Dialogs.showBottomSheet (activity);
             else
-                getLoaction();
+                getLoaction ();
 
         }
     }
 
 
     public void getLoaction() {
-        GPSTracker gpsTracker = new GPSTracker(activity);
+        GPSTracker gpsTracker = new GPSTracker (activity);
         gpsOpen = gpsTracker.isGPSEnabled;
         if (!gpsOpen) {
-            gpsTracker.showSettingsAlert();
+            gpsTracker.showSettingsAlert ();
         } else {
 
-            lat = gpsTracker.getLatitude();
-            lon = gpsTracker.getLongitude();
+            lat = gpsTracker.getLatitude ();
+            lon = gpsTracker.getLongitude ();
         }
     }
 

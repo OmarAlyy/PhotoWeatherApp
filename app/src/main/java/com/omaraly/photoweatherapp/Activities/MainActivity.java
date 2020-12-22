@@ -5,13 +5,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.omaraly.photoweatherapp.Adapters.PostsAdapter;
 import com.omaraly.photoweatherapp.Fragments.ActionBottomDialogFragment;
@@ -22,6 +16,11 @@ import com.omaraly.photoweatherapp.Utilities.Dialogs;
 import com.omaraly.photoweatherapp.Utilities.GPSTracker;
 import com.omaraly.photoweatherapp.Utilities.GlobalVariables;
 import com.omaraly.photoweatherapp.databinding.ActivityMainBinding;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProviders;
 
 import static com.omaraly.photoweatherapp.Utilities.Camera.CAMERA_REQUEST;
 import static com.omaraly.photoweatherapp.Utilities.Camera.GALLERY_REQUEST;
@@ -36,27 +35,26 @@ public class MainActivity extends AppCompatActivity implements ActionBottomDialo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        super.onCreate (savedInstanceState);
+        setContentView (R.layout.activity_main);
+        binding = DataBindingUtil.setContentView (this, R.layout.activity_main);
 
-        mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        mainViewModel = ViewModelProviders.of (this).get (MainViewModel.class);
         mainViewModel.activity = this;
-        binding.setViewModel(mainViewModel);
+        binding.setViewModel (mainViewModel);
 
-        mainViewModel.getLoaction();
+        mainViewModel.getLoaction ();
 
-        mainViewModel.getAllPosts().observe(this, posts -> {
+        mainViewModel.getAllPosts ().observe (this, posts -> {
 
-            Log.e("posts", posts.size() + "");
-            if (posts.size() > 0) {
-
-                binding.linNoData.setVisibility(View.GONE);
-                PostsAdapter adapter = new PostsAdapter(this, posts);
-                binding.list.setAdapter(adapter);
+            if (posts.size () > 0) {
+                binding.linNoData.setVisibility (View.GONE);
+                binding.list.setVisibility (View.VISIBLE);
+                PostsAdapter adapter = new PostsAdapter (this, posts);
+                binding.list.setAdapter (adapter);
             } else {
-                binding.linNoData.setVisibility(View.VISIBLE);
-                binding.list.setVisibility(View.GONE);
+                binding.linNoData.setVisibility (View.VISIBLE);
+                binding.list.setVisibility (View.GONE);
             }
 
         });
@@ -65,16 +63,16 @@ public class MainActivity extends AppCompatActivity implements ActionBottomDialo
 
     @Override
     protected void onResume() {
-        mainViewModel.isNeedPermission();
+        mainViewModel.isNeedPermission ();
 
-        gpsTracker = new GPSTracker(this);
+        gpsTracker = new GPSTracker (this);
         mainViewModel.gpsOpen = gpsTracker.isGPSEnabled;
 
         if (gpsTracker.isGPSEnabled) {
-            mainViewModel.lat = gpsTracker.getLatitude();
-            mainViewModel.lon = gpsTracker.getLongitude();
+            mainViewModel.lat = gpsTracker.getLatitude ();
+            mainViewModel.lon = gpsTracker.getLongitude ();
         }
-        super.onResume();
+        super.onResume ();
     }
 
 
@@ -92,12 +90,12 @@ public class MainActivity extends AppCompatActivity implements ActionBottomDialo
                 // Permission was granted.
 
                 if (mainViewModel.gpsOpen)
-                    Dialogs.showBottomSheet(this);
+                    Dialogs.showBottomSheet (this);
                 else
-                    mainViewModel.getLoaction();
+                    mainViewModel.getLoaction ();
             } else {
 
-                Dialogs.showSnackbarToGoSettings(binding.addImage, this);
+                Dialogs.showSnackbarToGoSettings (binding.addImage, this);
             }
         }
     }
@@ -106,10 +104,10 @@ public class MainActivity extends AppCompatActivity implements ActionBottomDialo
     @Override
     public void onItemClick(int type) {
         if (type == GlobalVariables.CAMERA) {
-            Camera.captureImage(this);
+            Camera.captureImage (this);
         } else if (type == GlobalVariables.GALLERY) {
-            Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivityForResult(i, GALLERY_REQUEST);
+            Intent i = new Intent (Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult (i, GALLERY_REQUEST);
         }
 
     }
@@ -117,25 +115,25 @@ public class MainActivity extends AppCompatActivity implements ActionBottomDialo
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult (requestCode, resultCode, data);
         if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
 
 
             try {
-                String path = Camera.getPath(this, Camera.fileUri);
-                mainViewModel.openShowCardActivity(path);
+                String path = Camera.getPath (this, Camera.fileUri);
+                mainViewModel.openShowCardActivity (path);
             } catch (Exception e) {
-                e.printStackTrace();
+                e.printStackTrace ();
             }
 
         } else if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
 
             try {
-                Uri selectedImage = data.getData();
-                String path = Camera.getPath(this, selectedImage);
-                mainViewModel.openShowCardActivity(path);
+                Uri selectedImage = data.getData ();
+                String path = Camera.getPath (this, selectedImage);
+                mainViewModel.openShowCardActivity (path);
             } catch (Exception e) {
-                e.printStackTrace();
+                e.printStackTrace ();
             }
 
         }

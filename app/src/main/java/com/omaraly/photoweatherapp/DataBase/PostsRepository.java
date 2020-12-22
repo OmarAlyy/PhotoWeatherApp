@@ -14,9 +14,9 @@ public class PostsRepository {
     private LiveData<List<Post>> postsListLiveData;
 
     public PostsRepository(Application application) {
-        AppDatabase database = AppDatabase.getInstance(application);
-        postDao = database.postDao();
-        postsListLiveData = postDao.getAllAds();
+        AppDatabase database = AppDatabase.getInstance (application);
+        postDao = database.postDao ();
+        postsListLiveData = postDao.getAllAds ();
     }
 
 
@@ -26,7 +26,7 @@ public class PostsRepository {
 
     public void insert(Post adInfo) {
 
-        AsyncTask.execute(() -> postDao.insert(adInfo));
+        AsyncTask.execute (() -> postDao.insert (adInfo));
 
     }
 
@@ -34,10 +34,10 @@ public class PostsRepository {
     public void delete(Post adInfo) {
         try {
             if (adInfo != null) {
-                AsyncTask.execute(() -> postDao.delete(adInfo));
+                AsyncTask.execute (() -> postDao.delete (adInfo));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace ();
         }
     }
 

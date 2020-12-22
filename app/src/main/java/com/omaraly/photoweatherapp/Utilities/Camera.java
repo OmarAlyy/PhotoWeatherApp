@@ -19,13 +19,13 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+
+import androidx.annotation.NonNull;
 
 
 public class Camera {
@@ -38,56 +38,72 @@ public class Camera {
         boolean saved;
         OutputStream fos;
         String imagesDir = "";
+        Uri imageUri = null;
         File image = null;
         String IMAGES_FOLDER_NAME = "Photo_Weather_Task";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            ContentResolver resolver = activity.getContentResolver();
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, name);
-            contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/png");
-            contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, "DCIM/" + IMAGES_FOLDER_NAME);
-            Uri imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
-            fos = resolver.openOutputStream(imageUri);
+            ContentResolver resolver = activity.getContentResolver ();
+            ContentValues contentValues = new ContentValues ();
+            contentValues.put (MediaStore.MediaColumns.DISPLAY_NAME, name);
+            contentValues.put (MediaStore.MediaColumns.MIME_TYPE, "image/png");
+            contentValues.put (MediaStore.MediaColumns.RELATIVE_PATH, "DCIM/" + IMAGES_FOLDER_NAME);
+            imageUri = resolver.insert (MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
+            fos = resolver.openOutputStream (imageUri);
         } else {
-            imagesDir = Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DCIM).toString() + File.separator + IMAGES_FOLDER_NAME;
+            imagesDir = Environment.getExternalStoragePublicDirectory (
+                    Environment.DIRECTORY_DCIM).toString () + File.separator + IMAGES_FOLDER_NAME;
 
-            File file = new File(imagesDir);
 
-            if (!file.exists()) {
-                file.mkdir();
+            File file = new File (imagesDir);
+
+            if (!file.exists ()) {
+                file.mkdir ();
             }
 
-            image = new File(imagesDir, name + ".png");
-            fos = new FileOutputStream(image);
+            image = new File (imagesDir, name + ".png");
+            fos = new FileOutputStream (image);
 
         }
 
-        saved = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-        fos.flush();
-        fos.close();
 
+        bitmap.compress (Bitmap.CompressFormat.PNG, 100, fos);
+        fos.flush ();
+        fos.close ();
 
-        return image.getAbsolutePath();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+
+            return getRealPathFromURI (activity, imageUri);
+
+        } else
+            return image.getAbsolutePath ();
 
 
     }
 
+
+    public static String getRealPathFromURI(Activity activity, Uri uri) {
+        Cursor cursor = activity.getContentResolver ().query (uri, null, null, null, null);
+        cursor.moveToFirst ();
+        int idx = cursor.getColumnIndex (MediaStore.Images.ImageColumns.DATA);
+        return cursor.getString (idx);
+    }
+
+
     public static Bitmap getBitmapFromView(View view) {
         //Define a bitmap with the same size as the view
-        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap returnedBitmap = Bitmap.createBitmap (view.getWidth (), view.getHeight (), Bitmap.Config.ARGB_8888);
         //Bind a canvas to it
-        Canvas canvas = new Canvas(returnedBitmap);
+        Canvas canvas = new Canvas (returnedBitmap);
         //Get the view's background
-        Drawable bgDrawable = view.getBackground();
+        Drawable bgDrawable = view.getBackground ();
         if (bgDrawable != null)
             //has background drawable, then draw it on the canvas
-            bgDrawable.draw(canvas);
+            bgDrawable.draw (canvas);
         else
             //does not have background drawable, then draw white background on the canvas
-            canvas.drawColor(Color.WHITE);
+            canvas.drawColor (Color.WHITE);
         // draw the view on the canvas
-        view.draw(canvas);
+        view.draw (canvas);
         //return the bitmap
         return returnedBitmap;
     }
@@ -95,13 +111,13 @@ public class Camera {
     public static String getPath(Context context, Uri uri) {
         String result = null;
         String[] proj = {MediaStore.Images.Media.DATA};
-        Cursor cursor = context.getContentResolver().query(uri, proj, null, null, null);
+        Cursor cursor = context.getContentResolver ().query (uri, proj, null, null, null);
         if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                int column_index = cursor.getColumnIndexOrThrow(proj[0]);
-                result = cursor.getString(column_index);
+            if (cursor.moveToFirst ()) {
+                int column_index = cursor.getColumnIndexOrThrow (proj[0]);
+                result = cursor.getString (column_index);
             }
-            cursor.close();
+            cursor.close ();
         }
         if (result == null) {
             result = "Not found";
@@ -114,58 +130,58 @@ public class Camera {
     public static String getPath(Activity activity, Uri selectedImaeUri) {
         String[] projection = {MediaStore.Images.Media.DATA};
 
-        Cursor cursor = activity.managedQuery(selectedImaeUri, projection, null, null,
+        Cursor cursor = activity.managedQuery (selectedImaeUri, projection, null, null,
                 null);
 
         if (cursor != null) {
-            cursor.moveToFirst();
+            cursor.moveToFirst ();
 
-            int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            int columnIndex = cursor.getColumnIndexOrThrow (MediaStore.Images.Media.DATA);
 
-            return cursor.getString(columnIndex);
+            return cursor.getString (columnIndex);
         }
 
-        return selectedImaeUri.getPath();
+        return selectedImaeUri.getPath ();
     }
 
     public static void captureImage(Activity activity) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(activity.getPackageManager()) != null) {
-            ContentValues values = new ContentValues(1);
-            values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
-            fileUri = activity.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
+        if (intent.resolveActivity (activity.getPackageManager ()) != null) {
+            ContentValues values = new ContentValues (1);
+            values.put (MediaStore.Images.Media.MIME_TYPE, "image/jpg");
+            fileUri = activity.getContentResolver ().insert (MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-            activity.startActivityForResult(intent, CAMERA_REQUEST);
+            intent.putExtra (MediaStore.EXTRA_OUTPUT, fileUri);
+            intent.addFlags (Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+            activity.startActivityForResult (intent, CAMERA_REQUEST);
 
         } else {
-            Toast.makeText(activity, "error_no_camera", Toast.LENGTH_SHORT).show();
+            Toast.makeText (activity, "error_no_camera", Toast.LENGTH_SHORT).show ();
         }
     }
 
     public static void captureImage(DialogFragment fragment) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(fragment.getActivity().getPackageManager()) != null) {
-            ContentValues values = new ContentValues(1);
-            values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
-            fileUri = fragment.getActivity().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Intent intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
+        if (intent.resolveActivity (fragment.getActivity ().getPackageManager ()) != null) {
+            ContentValues values = new ContentValues (1);
+            values.put (MediaStore.Images.Media.MIME_TYPE, "image/jpg");
+            fileUri = fragment.getActivity ().getContentResolver ().insert (MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-            fragment.startActivityForResult(intent, CAMERA_REQUEST);
+            intent.putExtra (MediaStore.EXTRA_OUTPUT, fileUri);
+            intent.addFlags (Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+            fragment.startActivityForResult (intent, CAMERA_REQUEST);
 
         } else {
-            Toast.makeText(fragment.getActivity(), "error_no_camera", Toast.LENGTH_SHORT).show();
+            Toast.makeText (fragment.getActivity (), "error_no_camera", Toast.LENGTH_SHORT).show ();
         }
     }
 
 
     public static Bitmap decodeUri(Activity activity, Uri selectedImage) throws FileNotFoundException {
-        BitmapFactory.Options o = new BitmapFactory.Options();
+        BitmapFactory.Options o = new BitmapFactory.Options ();
         o.inJustDecodeBounds = true;
-        BitmapFactory.decodeStream(activity.getContentResolver()
-                .openInputStream(selectedImage), null, o);
+        BitmapFactory.decodeStream (activity.getContentResolver ()
+                .openInputStream (selectedImage), null, o);
         final int REQUIRED_SIZE = 72;
         int width_tmp = o.outWidth, height_tmp = o.outHeight;
         int scale = 1;
@@ -178,10 +194,10 @@ public class Camera {
             scale *= 2;
         }
 
-        BitmapFactory.Options o2 = new BitmapFactory.Options();
+        BitmapFactory.Options o2 = new BitmapFactory.Options ();
         o2.inSampleSize = scale;
-        Bitmap bitmap = BitmapFactory.decodeStream(activity.getContentResolver()
-                .openInputStream(selectedImage), null, o2);
+        Bitmap bitmap = BitmapFactory.decodeStream (activity.getContentResolver ()
+                .openInputStream (selectedImage), null, o2);
         return bitmap;
     }
 
