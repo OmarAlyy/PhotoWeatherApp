@@ -1,0 +1,10 @@
+
+S
+java:S1874"1Remove this use of "AsyncTask"; it is deprecated.(õ¾­îıÿÿÿÿ8£•›·è.
+L
+java:S1068"*Remove this unused "adsDao" private field.(Êá·¹ıÿÿÿÿ8£•›·è.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ó¼¥úÿÿÿÿ8Ë±–·è.
+Y
+java:S3985"7Remove this unused private "PopulateDbAsyncTask" class.(õ¾­îıÿÿÿÿ8£•›·è.
+Z
+java:S1144"=Remove this unused private "PopulateDbAsyncTask" constructor.(Í‡€ü8£•›·è.

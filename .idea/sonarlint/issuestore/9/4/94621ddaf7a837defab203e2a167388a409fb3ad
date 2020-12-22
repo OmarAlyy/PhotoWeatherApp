@@ -1,0 +1,16 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åÇ‚‰üÿÿÿÿ
+£
+java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(»ŠÇ¾ıÿÿÿÿ8Ö—®Ïè.
+E
+java:S1604)"(Make this anonymous inner class a lambda(ß·üÈ8Ö—®Ïè.
+\
+java:S1118":Add a private constructor to hide the implicit public one.(´ú‰ãşÿÿÿÿ8“à¹Ïè.
+E
+java:S1604""(Make this anonymous inner class a lambda(¬€…8Ö—®Ïè.
+J
+java:S1604@"(Make this anonymous inner class a lambda(˜¯÷±øÿÿÿÿ8ŠäªÏè.
+E
+java:S1604k"(Make this anonymous inner class a lambda(Ë¯³Ö8óŞ©Ïè.
+Y
+java:S1610"7Convert the abstract class "Dialogs" into an interface.(´ú‰ãşÿÿÿÿ8×÷²Ïè.

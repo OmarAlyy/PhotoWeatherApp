@@ -1,0 +1,13 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò¾Œ×øÿÿÿÿ
+U
+java:S1118
+":Add a private constructor to hide the implicit public one.(ğÎÜìıÿÿÿÿ
+Q
+java:S1874";Remove this use of "updateConfiguration"; it is deprecated.( ¦üü
+o
+java:S1450"YRemove the "configFile" field and declare it as a local variable in the relevant methods.(²ûä
+Z
+java:S2147""DCombine this catch with the one at line 32, which has the same body.(üùÔè
+D
+java:S1874".Remove this use of "locale"; it is deprecated.(¹ã†É

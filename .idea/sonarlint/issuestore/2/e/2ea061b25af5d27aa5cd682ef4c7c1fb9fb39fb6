@@ -1,0 +1,11 @@
+
+E
+java:S1604 "(Make this anonymous inner class a lambda(„ÑñŒ8¼ŸµÏè.
+]	java:S110"<This class has 9 parents which is greater than 5 authorized.(äÊãøÿÿÿÿ8¼ŸµÏè.
+
+java:S1450"dRemove the "activitySplashBinding" field and declare it as a local variable in the relevant methods.(óåâ¯8¼ŸµÏè.
+V
+java:S1068"9Remove this unused "activitySplashBinding" private field.(óåâ¯8¼ŸµÏè.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿Âàÿøÿÿÿÿ8´ŒµÏè.
+L
+java:S1874 "/Remove this use of "Handler"; it is deprecated.(„ÑñŒ8¼ŸµÏè.

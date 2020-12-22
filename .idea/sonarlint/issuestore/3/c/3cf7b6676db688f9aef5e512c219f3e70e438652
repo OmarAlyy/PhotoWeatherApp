@@ -1,0 +1,35 @@
+
+f	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÏä‹
+J
+java:S3740Y"/Provide the parametrized type for this generic.(¬æ°Šÿÿÿÿÿ
+J
+java:S3740H"/Provide the parametrized type for this generic.(…ÛíÜÿÿÿÿÿ
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œƒÁıÿÿÿÿ
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œƒÁıÿÿÿÿ
+V	java:S125L"<This block of commented-out lines of code should be removed.(™¡ïÄøÿÿÿÿ
+E
+java:S3740o"/Provide the parametrized type for this generic.(ûêëş
+J
+java:S3740)"/Provide the parametrized type for this generic.(ä¹Äıÿÿÿÿ
+E
+java:S3740 "/Provide the parametrized type for this generic.(ñëÑÓ
+J
+java:S3740w"/Provide the parametrized type for this generic.(ÜÎ¸¯úÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åÇ‚‰üÿÿÿÿ
+J
+java:S3740A"/Provide the parametrized type for this generic.(®‡Ê”øÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(¡Á¢’ÿÿÿÿÿ
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œƒÁıÿÿÿÿ
+D
+java:S3740R"/Provide the parametrized type for this generic.(•£÷N
+R	java:S125š"<This block of commented-out lines of code should be removed.(Ò‹ÈÄ
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œƒÁıÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(¢š¸
+J
+java:S1172–".Remove this unused method parameter "subject".(‡ÈÈÊıÿÿÿÿ
+J
+java:S16046"(Make this anonymous inner class a lambda(Ù÷îøÿÿÿÿ8Æ±Ïè.
+]
+java:S1610";Convert the abstract class "IntentClass" into an interface.(¡Á¢’ÿÿÿÿÿ8Æ±Ïè.

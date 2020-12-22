@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PhotoWeather*</string>
+
+
+    <string name="no_network">No Internet Connection</string>
+    <string name="select_picture_from">Select picture from</string>
+    <string name="camera">camera</string>
+    <string name="photo_gallery">Photo Gallery</string>
+
+
+</resources>

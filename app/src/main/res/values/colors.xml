@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+    <color name="colorPrimary">#081b24</color>
+
+    <color name="colorPrimaryDark">#081b24</color>
+
+    <color name="colorAccent">#081b24</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="text">#515151</color>
+
+    <color name="text_splash">#B1B1B1</color>
+
+    <color name="skay">#4793ff</color>
+    <color name="blue">#424fdd</color>
+
+</resources>

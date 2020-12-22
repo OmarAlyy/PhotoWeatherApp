@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\bottom_sheet_select_image.xml",
+        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\bottom_sheet_select_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_show_card.xml",
+        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\activity_show_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\20111\\Omar\\PhotoWeatherTask\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

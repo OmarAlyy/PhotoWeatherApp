@@ -1,0 +1,14 @@
+
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¬´õ™þÿÿÿÿ8˜Û†¶è.
+L
+java:S1066"/Merge this if statement with the enclosing one.(µ ‡Œ8˜Û†¶è.
+m
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(Ñƒ¨áúÿÿÿÿ8˜Û†¶è.
+S
+java:S1172*"6Remove this unused method parameter "currentActivity".(àëÉé8˜Û†¶è.
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½õ§Š8˜Û†¶è.
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(©ÑÏ®øÿÿÿÿ8˜Û†¶è.
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÝžŸæ8˜Û†¶è.

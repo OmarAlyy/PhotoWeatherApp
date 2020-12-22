@@ -1,0 +1,9 @@
+
+]	java:S110"<This class has 9 parents which is greater than 5 authorized.(ôˆ¡®şÿÿÿÿ8Íêêµè.
+{
+java:S1104""YMake mainViewModel a static final constant or non-public and provide accessors if needed.( ’ş¥ùÿÿÿÿ8Á„¯·è.
+L
+java:S1874*"*Remove this use of "of"; it is deprecated.(²‡ª±ıÿÿÿÿ8ô»á¸è.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿Âàÿøÿÿÿÿ8€Œåµè.
+\
+java:S1874*":Remove this use of "ViewModelProviders"; it is deprecated.(²‡ª±ıÿÿÿÿ8ô»á¸è.

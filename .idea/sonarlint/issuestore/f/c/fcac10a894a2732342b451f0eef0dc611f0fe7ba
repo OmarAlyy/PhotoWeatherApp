@@ -1,0 +1,10 @@
+
+S
+java:S1874%"1Remove this use of "AsyncTask"; it is deprecated.(­åš’ùÿÿÿÿ8àĞÏ¹è.
+Q
+java:S1874%"/Remove this use of "execute"; it is deprecated.(­åš’ùÿÿÿÿ8àĞÏ¹è.
+N
+java:S1874"1Remove this use of "AsyncTask"; it is deprecated.(ƒ®„8Á Ï¹è.
+L
+java:S1874"/Remove this use of "execute"; it is deprecated.(ƒ®„8Á Ï¹è.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ó¼¥úÿÿÿÿ

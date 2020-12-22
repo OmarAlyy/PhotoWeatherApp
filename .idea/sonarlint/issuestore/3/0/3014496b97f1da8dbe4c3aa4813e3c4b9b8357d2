@@ -1,0 +1,32 @@
+
+˜
+java:S1186ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(­íÖ«
+m
+java:S3776>"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(øˆ÷Ãùÿÿÿÿ
+N
+java:S1135"2Complete the task associated to this TODO comment.(áÃæùÿÿÿÿ
+D
+java:S1125O")Remove the literal "false" boolean value.(“Ò¬åüÿÿÿÿ
+K
+java:S1874È"5Remove this use of "LOCATION_MODE"; it is deprecated.(½âÛ
+R
+java:S2589o"7Remove this expression which always evaluates to "true"(êÿ×¤ùÿÿÿÿ
+^
+java:S1874Ò"BRemove this use of "LOCATION_PROVIDERS_ALLOWED"; it is deprecated.(ù¡³ùÿÿÿÿÿ
+s
+java:S1104"XMake isGPSEnabled a static final constant or non-public and provide accessors if needed.(’³ˆÄúÿÿÿÿ
+˜
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(çÅğÙ
+D
+java:S1125O")Remove the literal "false" boolean value.(“Ò¬åüÿÿÿÿ
+h
+java:S2259p"MA "NullPointerException" could be thrown; "locationManager" is nullable here.(ı¡­Ôûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åÇ‚‰üÿÿÿÿ
+M
+java:S1135V"2Complete the task associated to this TODO comment.(áÃæùÿÿÿÿ
+˜
+java:S1186ı"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÁïÕÒ
+a
+java:S1874…"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ÀÄŞ’
+˜
+java:S1186…"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÀÄŞ’

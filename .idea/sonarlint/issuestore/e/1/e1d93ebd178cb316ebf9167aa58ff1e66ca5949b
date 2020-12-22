@@ -1,0 +1,71 @@
+
+m
+java:S1104l"PMake main a static final constant or non-public and provide accessors if needed.(Øêíº8ó×úµè.
+p
+java:S1104k"NMake id a static final constant or non-public and provide accessors if needed.(Â¥Šˆøÿÿÿÿ8ó×úµè.
+r
+java:S1104"PMake main a static final constant or non-public and provide accessors if needed.(¨Äß¥úÿÿÿÿ8ó×úµè.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õÖ˜Š
+s
+java:S1104"QMake coord a static final constant or non-public and provide accessors if needed.(•Êğ›øÿÿÿÿ8ó×úµè.
+y
+java:S1104m"WMake description a static final constant or non-public and provide accessors if needed.(¹ÿ†ğÿÿÿÿÿ8ó×úµè.
+r
+java:S1104"PMake base a static final constant or non-public and provide accessors if needed.(Ã¡ıûÿÿÿÿ8ó×úµè.
+m
+java:S1104n"PMake icon a static final constant or non-public and provide accessors if needed.(­À¤8ó×úµè.
+x
+java:S1104"VMake visibility a static final constant or non-public and provide accessors if needed.(ãÚ¿ûÿÿÿÿ8Úã›¶è.
+r
+java:S1104"PMake wind a static final constant or non-public and provide accessors if needed.(â ™³øÿÿÿÿ8Úã›¶è.
+t
+java:S1104"RMake clouds a static final constant or non-public and provide accessors if needed.(­ñ“ˆúÿÿÿÿ8Úã›¶è.
+k
+java:S1104"NMake dt a static final constant or non-public and provide accessors if needed.(Ş…Èå8Úã›¶è.
+q
+java:S1104"OMake sys a static final constant or non-public and provide accessors if needed.(Û‚à©şÿÿÿÿ8Úã›¶è.
+v
+java:S1104"TMake timezone a static final constant or non-public and provide accessors if needed.(± ‰÷ûÿÿÿÿ8Úã›¶è.
+p
+java:S1104 "NMake id a static final constant or non-public and provide accessors if needed.(Â¥Šˆøÿÿÿÿ8Úã›¶è.
+m
+java:S1104!"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾8Úã›¶è.
+l
+java:S1104""OMake cod a static final constant or non-public and provide accessors if needed.(‚µ½­8Úã›¶è.
+p
+java:S1104#"SMake weather a static final constant or non-public and provide accessors if needed.(å «–8Úã›¶è.
+q
+java:S1104+"OMake lon a static final constant or non-public and provide accessors if needed.(è¸ÿªÿÿÿÿÿ8Úã›¶è.
+l
+java:S1104,"OMake lat a static final constant or non-public and provide accessors if needed.(è³¦8Úã›¶è.
+m
+java:S11049"PMake temp a static final constant or non-public and provide accessors if needed.(‘—­›8Úã›¶è.
+x
+java:S1104:"VMake feels_like a static final constant or non-public and provide accessors if needed.(ïØ¥°ùÿÿÿÿ8Úã›¶è.
+v
+java:S1104;"TMake temp_min a static final constant or non-public and provide accessors if needed.(ÿ­Ú‰øÿÿÿÿ8Úã›¶è.
+q
+java:S1104<"TMake temp_max a static final constant or non-public and provide accessors if needed.(Àå“ã8Úã›¶è.
+q
+java:S1104="TMake pressure a static final constant or non-public and provide accessors if needed.(ŸŸŒ8Úã›¶è.
+p
+java:S1104>"TMake humidity a static final constant or non-public and provide accessors if needed.(³Û„t8Úã›¶è.
+s
+java:S1104G"QMake speed a static final constant or non-public and provide accessors if needed.(ë°¥Óüÿÿÿÿ8Úã›¶è.
+q
+java:S1104H"OMake deg a static final constant or non-public and provide accessors if needed.(¾Í­¼øÿÿÿÿ8Úã›¶è.
+q
+java:S1104P"OMake all a static final constant or non-public and provide accessors if needed.(©¢ªúûÿÿÿÿ8Úã›¶è.
+r
+java:S1104\"PMake type a static final constant or non-public and provide accessors if needed.(ÙşÓ¼ûÿÿÿÿ8Úã›¶è.
+p
+java:S1104]"NMake id a static final constant or non-public and provide accessors if needed.(Â¥Šˆøÿÿÿÿ8Úã›¶è.
+p
+java:S1104^"SMake country a static final constant or non-public and provide accessors if needed.(Ø¬8Úã›¶è.
+u
+java:S1104_"SMake sunrise a static final constant or non-public and provide accessors if needed.(ıÓÎóûÿÿÿÿ8Úã›¶è.
+o
+java:S1104`"RMake sunset a static final constant or non-public and provide accessors if needed.(…Á±8Úã›¶è.
+v	java:S116:"URename this field "feels_like" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïØ¥°ùÿÿÿÿ8Úã›¶è.
+t	java:S116;"SRename this field "temp_min" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ­Ú‰øÿÿÿÿ8Úã›¶è.
+o	java:S116<"SRename this field "temp_max" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àå“ã8Úã›¶è.
