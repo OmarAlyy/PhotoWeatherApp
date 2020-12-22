@@ -48,6 +48,9 @@ public class Utilities {
         }
 
 
+
+
+
     }
 
     public static void downLoadImageLocal(ImageView imageView, String url) {

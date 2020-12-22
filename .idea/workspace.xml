@@ -24,7 +24,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_28_for_old" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_API_30" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -55,6 +55,31 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1608638264" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1608638263" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="ProjectId" id="1ly3KHA1MQTkBiWI6dWgIIAU8xb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -62,8 +87,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_API_28_for_old" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-22T11:43:15.832Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-22T12:48:45.203Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -172,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608638202996</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first push">
+      <created>1608638269758</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608638269758</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -212,10 +244,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="244" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608568897978" />
-    <state x="278" y="0" key="CommitChangelistDialog2" timestamp="1608638200775">
+    <state x="278" y="0" key="CommitChangelistDialog2" timestamp="1608638269241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="278" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1608638200775" />
+    <state x="278" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1608638269241" />
     <state x="640" y="158" key="FileChooserDialogImpl" timestamp="1608577961941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,18 +268,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1834" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608637543744" />
-    <state x="352" y="96" key="Vcs.Push.Dialog.v2" timestamp="1608638226500">
+    <state x="352" y="96" key="Vcs.Push.Dialog.v2" timestamp="1608638272049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="96" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608638226500" />
+    <state x="352" y="96" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608638272049" />
     <state x="686" y="266" key="chooseDestDirectoryDialog" timestamp="1608561441579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="686" y="266" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608561441579" />
-    <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1608638019504">
+    <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1608641329580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608638019504" />
+    <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608641329580" />
     <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1608633706113">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
