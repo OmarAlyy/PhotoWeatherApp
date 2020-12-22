@@ -13,7 +13,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f022e31-fd3f-4536-807f-1cbcb6495c3a" name="Default Changelist" comment="" />
+    <list default="true" id="8f022e31-fd3f-4536-807f-1cbcb6495c3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,9 +48,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ly3KHA1MQTkBiWI6dWgIIAU8xb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,6 +65,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_API_28_for_old" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-22T11:43:15.832Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -156,7 +165,19 @@
       <option name="presentableId" value="Default" />
       <updated>1608555437436</updated>
     </task>
+    <task id="LOCAL-00001" summary="first push">
+      <created>1608638202996</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608638202996</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first push" />
+    <option name="LAST_COMMIT_MESSAGE" value="first push" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1608636665278">
@@ -191,6 +212,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="244" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608568897978" />
+    <state x="278" y="0" key="CommitChangelistDialog2" timestamp="1608638200775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="278" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1608638200775" />
     <state x="640" y="158" key="FileChooserDialogImpl" timestamp="1608577961941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -211,6 +236,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1834" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608637543744" />
+    <state x="352" y="96" key="Vcs.Push.Dialog.v2" timestamp="1608638226500">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="352" y="96" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608638226500" />
     <state x="686" y="266" key="chooseDestDirectoryDialog" timestamp="1608561441579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
